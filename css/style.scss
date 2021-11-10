@@ -48,7 +48,24 @@ html {
 section {
     padding: 2rem 9%;
 }
+.section-title {
+    text-align: center;
 
+    h3 {
+        font-size: 34px;
+
+        span {
+            color: $primary;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        margin: 10px auto 0 auto;
+        width: 44%;
+        color: $light-color;
+    }
+}
 .btn {
     display: inline-block;
     margin-top: 1rem;
@@ -402,24 +419,6 @@ section {
 
 .kategory {
     margin: 60px 0;
-    .section-title {
-        text-align: center;
-
-        h3 {
-            font-size: 34px;
-
-            span {
-                color: $primary;
-            }
-        }
-
-        p {
-            font-size: 18px;
-            margin: 10px auto 0 auto;
-            width: 44%;
-            color: $light-color;
-        }
-    }
 
     .row {
         margin: 0 -5px;
@@ -615,20 +614,144 @@ section {
         }
     }
 }
-
 .blogs {
-    .section-title {
-        text-align: center;
+    margin: 60px 0;
+}
+.blogs .box-container {
+    @include grid(30rem);
+    margin-top: 32px;
 
-        h3 {
-            font-size: 34px;
+    .box {
+        overflow: hidden;
+        border-radius: 8px;
 
-            span {
-                color: $primary;
+        &:hover {
+            .image {
+                img {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        .image {
+            height: 25rem;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+
+            h3 {
+                position: absolute;
+                z-index: 10;
+                top: 14px;
+                right: 14px;
+                border-radius: 8px;
+                background: $white;
+                color: $black;
+                font-size: 14px;
+                padding: 8px;
+                text-align: center;
+
+                i {
+                    padding-right: 8px;
+                    color: $primary;
+                }
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .content {
+            padding: 24px 32px;
+            background-color: $light-bg;
+            box-shadow: $box-shadow;
+
+            .tags {
+                padding-bottom: 8px;
+
+                a {
+                    font-size: 14px;
+                    color: $light-color;
+                    padding: 8px;
+
+                    i {
+                        color: $primary;
+                        padding-right: 8px;
+                    }
+                }
+            }
+
+            h3 {
+                font-size: 24px;
+                color: $black;
+            }
+
+            p {
+                font-size: 14px;
+                color: $light-color;
+                padding: 8 px 0;
+            }
+
+            a {
+                font-size: 18px;
+                margin-top: 8px;
             }
         }
     }
 }
+
+.footer {
+    background-image: url(../images/footer-bg.png), #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .box-container {
+        @include grid(25rem);
+
+        .box {
+            img {
+                max-width: 264px;
+            }
+
+            h3 {
+                display: block;
+                font-size: 24px;
+                color: $black;
+                padding: 16px 0;
+            }
+
+            p {
+                font-size: 18px;
+                color: $light-color;
+                padding: 16px 0;
+            }
+
+            a {
+                display: block;
+                font-size: 18px;
+                color: $light-color;
+                padding: 16px 0;
+
+                &:hover {
+                    color: $primary;
+
+                    i {
+                        padding-right: 32px;
+                    }
+                }
+
+                i {
+                    padding-right: 8px;
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
 // media queries
 
 @media (max-width: 991px) {
@@ -679,11 +802,37 @@ section {
             }
         }
     }
+
+    .banner {
+        .grid-banner {
+            .grid {
+                .content {
+                    padding: 0 16px;
+
+                    span {
+                        font-size: 24px;
+                    }
+
+                    h3 {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 450px) {
     html {
         font-size: 50%;
+    }
+
+    .header {
+        .logo-navbar {
+            img {
+                max-width: 148px;
+            }
+        }
     }
 
     .shopping-cart-container .cart-total {
@@ -721,6 +870,10 @@ section {
                     img {
                         width: 50%;
                     }
+
+                    p {
+                        font-size: 16px;
+                    }
                 }
             }
         }
@@ -745,7 +898,7 @@ section {
                     }
 
                     h3 {
-                        font-size: 24px;
+                        font-size: 18px;
                     }
                 }
             }

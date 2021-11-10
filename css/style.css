@@ -38,6 +38,25 @@ section {
   padding: 2rem 9%;
 }
 
+.section-title {
+  text-align: center;
+}
+
+.section-title h3 {
+  font-size: 34px;
+}
+
+.section-title h3 span {
+  color: #ce1700;
+}
+
+.section-title p {
+  font-size: 18px;
+  margin: 10px auto 0 auto;
+  width: 44%;
+  color: #666;
+}
+
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -441,25 +460,6 @@ section {
   margin: 60px 0;
 }
 
-.kategory .section-title {
-  text-align: center;
-}
-
-.kategory .section-title h3 {
-  font-size: 34px;
-}
-
-.kategory .section-title h3 span {
-  color: #ce1700;
-}
-
-.kategory .section-title p {
-  font-size: 18px;
-  margin: 10px auto 0 auto;
-  width: 44%;
-  color: #666;
-}
-
 .kategory .row {
   margin: 0 -5px;
   margin-top: 32px;
@@ -685,15 +685,147 @@ section {
   font-size: 24px;
 }
 
-.blogs .section-title {
+.blogs {
+  margin: 60px 0;
+}
+
+.blogs .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 32px;
+}
+
+.blogs .box-container .box {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.blogs .box-container .box:hover .image img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.blogs .box-container .box .image {
+  height: 25rem;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.blogs .box-container .box .image h3 {
+  position: absolute;
+  z-index: 10;
+  top: 14px;
+  right: 14px;
+  border-radius: 8px;
+  background: #fff;
+  color: #130f40;
+  font-size: 14px;
+  padding: 8px;
   text-align: center;
 }
 
-.blogs .section-title h3 {
-  font-size: 34px;
+.blogs .box-container .box .image h3 i {
+  padding-right: 8px;
+  color: #ce1700;
 }
 
-.blogs .section-title h3 span {
+.blogs .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.blogs .box-container .box .content {
+  padding: 24px 32px;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.blogs .box-container .box .content .tags {
+  padding-bottom: 8px;
+}
+
+.blogs .box-container .box .content .tags a {
+  font-size: 14px;
+  color: #666;
+  padding: 8px;
+}
+
+.blogs .box-container .box .content .tags a i {
+  color: #ce1700;
+  padding-right: 8px;
+}
+
+.blogs .box-container .box .content h3 {
+  font-size: 24px;
+  color: #130f40;
+}
+
+.blogs .box-container .box .content p {
+  font-size: 14px;
+  color: #666;
+  padding: 8 px 0;
+}
+
+.blogs .box-container .box .content a {
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.footer {
+  background-image: url(../images/footer-bg.png), #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.footer .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .box img {
+  max-width: 264px;
+}
+
+.footer .box-container .box h3 {
+  display: block;
+  font-size: 24px;
+  color: #130f40;
+  padding: 16px 0;
+}
+
+.footer .box-container .box p {
+  font-size: 18px;
+  color: #666;
+  padding: 16px 0;
+}
+
+.footer .box-container .box a {
+  display: block;
+  font-size: 18px;
+  color: #666;
+  padding: 16px 0;
+}
+
+.footer .box-container .box a:hover {
+  color: #ce1700;
+}
+
+.footer .box-container .box a:hover i {
+  padding-right: 32px;
+}
+
+.footer .box-container .box a i {
+  padding-right: 8px;
   color: #ce1700;
 }
 
@@ -738,11 +870,23 @@ section {
   .kategory .section-title p {
     width: 80%;
   }
+  .banner .grid-banner .grid .content {
+    padding: 0 16px;
+  }
+  .banner .grid-banner .grid .content span {
+    font-size: 24px;
+  }
+  .banner .grid-banner .grid .content h3 {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+  .header .logo-navbar img {
+    max-width: 148px;
   }
   .shopping-cart-container .cart-total .box {
     text-align: center;
@@ -766,6 +910,9 @@ section {
   .kategory .row .column .card img {
     width: 50%;
   }
+  .kategory .row .column .card p {
+    font-size: 16px;
+  }
   .banner .row-banner {
     height: 464px;
   }
@@ -777,7 +924,7 @@ section {
     font-size: 22px;
   }
   .banner .grid-banner .grid .content h3 {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 
