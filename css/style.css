@@ -589,6 +589,7 @@ section {
 
 .about .content .icons-container .icons h3 {
   font-size: 14px;
+  color: #130f40;
 }
 
 .banner .row-banner {
@@ -646,7 +647,7 @@ section {
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  height: 264px;
+  height: 324px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -786,14 +787,15 @@ section {
 }
 
 .blogs .box-container .box .content a {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .footer {
-  background-image: url(../images/footer-bg.png), -webkit-gradient(linear, left top, left bottom, from(rgba(175, 165, 165, 0.164)), to(rgba(175, 165, 165, 0.164)));
-  background-image: url(../images/footer-bg.png), linear-gradient(rgba(175, 165, 165, 0.164), rgba(175, 165, 165, 0.164));
+  background-image: url(../images/footer-bg.png), -webkit-gradient(linear, left top, left bottom, from(rgba(200, 200, 200, 0.164)), to(rgba(240, 240, 240, 0.678)));
+  background-image: url(../images/footer-bg.png), linear-gradient(rgba(200, 200, 200, 0.164), rgba(240, 240, 240, 0.678));
   background-position: center bottom;
   background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 
 .footer .box-container {
@@ -802,6 +804,7 @@ section {
   -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.5rem;
+  gap: 3.5rem;
 }
 
 .footer .box-container .box img {
@@ -817,8 +820,12 @@ section {
 
 .footer .box-container .box p {
   font-size: 18px;
-  color: #666;
+  color: #130f40;
   padding: 16px 0;
+}
+
+.footer .box-container .box p span {
+  color: #ce1700;
 }
 
 .footer .box-container .box a {
@@ -841,24 +848,44 @@ section {
   color: #ce1700;
 }
 
-.footer .bottom {
+footer {
+  padding: 32px 16px;
+}
+
+footer .bottom {
   text-align: center;
   font-size: 18px;
-  color: #ce1700;
-  padding-top: 24px;
-  margin-bottom: 16px;
+  padding: 16px 0;
 }
 
-.footer .bottom .socmed a {
-  font-size: 32px;
-  color: #ce1700;
-  padding: 0 8px;
-  text-shadow: rgba(0, 0, 0, 0.24);
+footer .bottom .socmed a {
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 24px;
+  background: #ce1700;
+  border-radius: 50%;
+  margin: 0 4px;
+  color: #fff;
 }
 
-.footer .credit {
-  font-size: 16px;
+footer .bottom .socmed a:hover {
+  color: #ce1700;
+  background: #f7f7f7;
+}
+
+footer .credit {
   text-align: center;
+}
+
+footer .credit p {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.452);
+  color: #130f40;
+  font-size: 16px;
+}
+
+footer .credit p span {
+  color: #ce1700;
 }
 
 @media (max-width: 991px) {
@@ -911,6 +938,13 @@ section {
   .banner .grid-banner .grid .content h3 {
     font-size: 24px;
   }
+  .footer .box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(36rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+    gap: 1.5rem;
+  }
 }
 
 @media (max-width: 450px) {
@@ -954,6 +988,9 @@ section {
   .banner .row-banner .content span,
   .banner .row-banner .content h3 {
     font-size: 32px;
+  }
+  .banner .grid-banner .grid {
+    height: 240px;
   }
   .banner .grid-banner .grid .content span {
     font-size: 24px;

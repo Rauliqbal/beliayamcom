@@ -524,6 +524,7 @@ section {
 
                 h3 {
                     font-size: 14px;
+                    color: $black;
                 }
             }
         }
@@ -576,7 +577,7 @@ section {
             position: relative;
             border-radius: 16px;
             overflow: hidden;
-            height: 264px;
+            height: 324px;
             display: flex;
 
             &:hover img {
@@ -705,19 +706,20 @@ section {
             }
 
             a {
-                font-size: 18px;
+                font-size: 16px;
             }
         }
     }
 }
 
 .footer {
-    background-image: url(../images/footer-bg.png), linear-gradient(rgba(175, 165, 165, 0.164), rgba(175, 165, 165, 0.164));
+    background-image: url(../images/footer-bg.png), linear-gradient(rgba(200, 200, 200, 0.164), rgba(240, 240, 240, 0.678));
     background-position: center bottom;
     background-repeat: no-repeat;
-
+    background-blend-mode: overlay;
     .box-container {
         @include grid(25rem);
+        gap: 3.5rem;
 
         .box {
             img {
@@ -733,8 +735,12 @@ section {
 
             p {
                 font-size: 18px;
-                color: $light-color;
+                color: $black;
                 padding: 16px 0;
+
+                span {
+                    color: $primary;
+                }
             }
 
             a {
@@ -758,28 +764,46 @@ section {
             }
         }
     }
+}
 
+footer {
+    padding: 32px 16px;
     .bottom {
         text-align: center;
         font-size: 18px;
-        color: $primary;
-        padding-top: 24px;
-
-        margin-bottom: 16px;
+        padding: 16px 0;
 
         .socmed {
             a {
-                font-size: 32px;
-                color: $primary;
-                padding: 0 8px;
-                text-shadow: rgba(0, 0, 0, 0.24);
+                width: 48px;
+                height: 48px;
+                line-height: 48px;
+                font-size: 24px;
+                background: $primary;
+                border-radius: 50%;
+                margin: 0 4px;
+                color: $white;
+
+                &:hover {
+                    color: $primary;
+                    background: $light-bg;
+                }
             }
         }
     }
 
     .credit {
-        font-size: 16px;
         text-align: center;
+
+        p {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.452);
+            color: $black;
+            font-size: 16px;
+
+            span {
+                color: $primary;
+            }
+        }
     }
 }
 
@@ -849,6 +873,12 @@ section {
                     }
                 }
             }
+        }
+    }
+
+    .footer {
+        .box-container {
+            @include grid(36rem);
         }
     }
 }
@@ -929,6 +959,8 @@ section {
 
         .grid-banner {
             .grid {
+                height: 240px;
+
                 .content {
                     span {
                         font-size: 24px;
