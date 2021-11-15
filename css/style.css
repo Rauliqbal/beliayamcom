@@ -431,9 +431,14 @@ section {
   color: #130f40;
 }
 
-.home .content span {
-  font-size: 20px;
+.home .content h3 {
+  font-size: 24px;
   color: #ce1700;
+  font-weight: 400;
+}
+
+.home .content h3 span {
+  font-weight: 600;
 }
 
 .home .content p {
@@ -653,6 +658,16 @@ section {
   display: flex;
 }
 
+.banner .grid-banner .grid::before {
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-color: rgba(216, 213, 213, 0.418);
+}
+
 .banner .grid-banner .grid:hover img {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
@@ -793,7 +808,7 @@ section {
 .footer {
   background-image: url(../images/footer-bg.png), -webkit-gradient(linear, left top, left bottom, from(rgba(200, 200, 200, 0.164)), to(rgba(240, 240, 240, 0.678)));
   background-image: url(../images/footer-bg.png), linear-gradient(rgba(200, 200, 200, 0.164), rgba(240, 240, 240, 0.678));
-  background-position: center bottom;
+  background-position: left 20% bottom;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
 }
@@ -888,6 +903,75 @@ footer .credit p span {
   color: #ce1700;
 }
 
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+.app .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  text-align: center;
+}
+
+.app .image img {
+  width: 100%;
+}
+
+.app .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.app .content .title {
+  font-size: 64px;
+  color: #ce1700;
+  margin-bottom: 16px;
+  line-height: 71px;
+}
+
+.app .content .title span {
+  font-size: 56px;
+  color: #130f40;
+}
+
+.app .content p {
+  font-size: 18px;
+  color: #666;
+  width: 80%;
+}
+
+.app .content .app-container {
+  margin-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: wrap;
+      -ms-flex: wrap;
+          flex: wrap;
+  gap: 24px;
+}
+
+.app .content .app-container .icon-app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+
+.app .content .app-container .icon-app img {
+  width: 164px;
+}
+
 @media (max-width: 991px) {
   .header {
     padding: 2rem;
@@ -897,7 +981,7 @@ footer .credit p span {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   #menu-btn {
     display: inline-block;
   }
@@ -929,6 +1013,11 @@ footer .credit p span {
   .kategory .section-title p {
     width: 80%;
   }
+  .about .content .icons-container .icons {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 32rem;
+            flex: 1 1 32rem;
+  }
   .banner .grid-banner .grid .content {
     padding: 0 16px;
   }
@@ -937,6 +1026,31 @@ footer .credit p span {
   }
   .banner .grid-banner .grid .content h3 {
     font-size: 24px;
+  }
+  .app .content .title {
+    text-align: center;
+  }
+  .app .content p {
+    text-align: center;
+    margin: 10px auto 0 auto;
+  }
+  .app .content .app-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .app .content .app-container .icon-app {
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   .footer .box-container {
     display: -ms-grid;
@@ -947,7 +1061,7 @@ footer .credit p span {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 552px) {
   html {
     font-size: 50%;
   }
@@ -997,6 +1111,16 @@ footer .credit p span {
   }
   .banner .grid-banner .grid .content h3 {
     font-size: 18px;
+  }
+  .app .content .title {
+    text-align: center;
+    font-size: 34px;
+    line-height: 38px;
+  }
+  .app .content p {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 16px;
   }
 }
 

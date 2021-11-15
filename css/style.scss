@@ -393,9 +393,14 @@ section {
             color: $black;
         }
 
-        span {
-            font-size: 20px;
+        h3 {
+            font-size: 24px;
             color: $primary;
+            font-weight: 400;
+
+            span {
+                font-weight: 600;
+            }
         }
 
         p {
@@ -580,6 +585,16 @@ section {
             height: 324px;
             display: flex;
 
+            &::before {
+                content: "";
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                position: absolute;
+                background-color: rgba(216, 213, 213, 0.418);
+            }
+
             &:hover img {
                 transform: scale(1.2);
             }
@@ -714,7 +729,7 @@ section {
 
 .footer {
     background-image: url(../images/footer-bg.png), linear-gradient(rgba(200, 200, 200, 0.164), rgba(240, 240, 240, 0.678));
-    background-position: center bottom;
+    background-position: left 20% bottom;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
     .box-container {
@@ -807,6 +822,60 @@ footer {
     }
 }
 
+.app {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+
+    .image {
+        flex: 1 1 40rem;
+        text-align: center;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .content {
+        flex: 1 1 40rem;
+
+        .title {
+            font-size: 64px;
+            color: $primary;
+            margin-bottom: 16px;
+            line-height: 71px;
+
+            span {
+                font-size: 56px;
+                color: $black;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            color: $light-color;
+            width: 80%;
+        }
+
+        .app-container {
+            margin-top: 16px;
+            display: flex;
+            flex: wrap;
+            gap: 24px;
+
+            .icon-app {
+                display: flex;
+
+                gap: 16px;
+
+                img {
+                    width: 164px;
+                }
+            }
+        }
+    }
+}
 // media queries
 
 @media (max-width: 991px) {
@@ -818,7 +887,7 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     #menu-btn {
         display: inline-block;
     }
@@ -858,6 +927,16 @@ footer {
         }
     }
 
+    .about {
+        .content {
+            .icons-container {
+                .icons {
+                    flex: 1 1 32rem;
+                }
+            }
+        }
+    }
+
     .banner {
         .grid-banner {
             .grid {
@@ -876,6 +955,29 @@ footer {
         }
     }
 
+    .app {
+        .content {
+            .title {
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+                margin: 10px auto 0 auto;
+            }
+
+            .app-container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: center;
+                .icon-app {
+                    justify-self: center;
+                }
+            }
+        }
+    }
+
     .footer {
         .box-container {
             @include grid(36rem);
@@ -883,7 +985,7 @@ footer {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 552px) {
     html {
         font-size: 50%;
     }
@@ -970,6 +1072,22 @@ footer {
                         font-size: 18px;
                     }
                 }
+            }
+        }
+    }
+
+    .app {
+        .content {
+            .title {
+                text-align: center;
+                font-size: 34px;
+                line-height: 38px;
+            }
+
+            p {
+                text-align: center;
+                font-size: 18px;
+                margin-top: 16px;
             }
         }
     }
