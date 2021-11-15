@@ -1082,12 +1082,23 @@ footer {
                 text-align: center;
                 font-size: 34px;
                 line-height: 38px;
+
+                span {
+                    font-size: 32px;
+                }
             }
 
             p {
                 text-align: center;
                 font-size: 18px;
                 margin-top: 16px;
+                width: 100%;
+            }
+
+            .icon-app {
+                img {
+                    width: 120px !important;
+                }
             }
         }
     }

@@ -1117,10 +1117,17 @@ footer .credit p span {
     font-size: 34px;
     line-height: 38px;
   }
+  .app .content .title span {
+    font-size: 32px;
+  }
   .app .content p {
     text-align: center;
     font-size: 18px;
     margin-top: 16px;
+    width: 100%;
+  }
+  .app .content .icon-app img {
+    width: 120px !important;
   }
 }
 
