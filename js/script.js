@@ -2,7 +2,6 @@ let cart = document.querySelector(".shopping-cart-container");
 
 document.querySelector("#cart-btn").onclick = () => {
     cart.classList.toggle("active");
-
     login.classList.remove("active");
     navbar.classList.remove("active");
 };
@@ -12,7 +11,6 @@ let login = document.querySelector(".login-form-container");
 document.querySelector("#login-btn").onclick = () => {
     login.classList.toggle("active");
     cart.classList.remove("active");
-
     navbar.classList.remove("active");
 };
 

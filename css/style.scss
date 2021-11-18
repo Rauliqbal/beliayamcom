@@ -66,6 +66,7 @@ section {
         color: $light-color;
     }
 }
+
 .btn {
     display: inline-block;
     margin-top: 1rem;
@@ -106,6 +107,9 @@ section {
             &:hover {
                 color: $primary;
             }
+        }
+        a.active {
+            color: $primary;
         }
     }
 
@@ -876,6 +880,100 @@ footer {
         }
     }
 }
+
+// Product Page
+.product-title {
+    text-align: center;
+    margin-top: 32px;
+
+    h3 {
+        font-size: 34px;
+
+        span {
+            color: $primary;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        margin: 10px auto 0 auto;
+        width: 70%;
+        color: $light-color;
+    }
+}
+
+.product-box {
+    @include grid(24rem);
+    margin: 24px 24px;
+
+    .box {
+        overflow: hidden;
+        border-radius: 16px;
+        box-shadow: $box-shadow;
+
+        &:hover {
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.322);
+        }
+    }
+
+    .image {
+        height: 25rem;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+
+            &:hover {
+                transform: scale(1.2);
+                overflow: hidden;
+            }
+        }
+
+        h3 {
+            position: absolute;
+            z-index: 6;
+            background: $primary;
+            color: $white;
+            font-size: 12px;
+            padding: 8px;
+            border-radius: 0 0 16px 0;
+        }
+    }
+
+    .content {
+        padding: 16px 32px;
+
+        h3 {
+            font-size: 18px;
+            color: $black;
+            margin-bottom: 8px;
+        }
+
+        .desc {
+            font-size: 14px;
+            color: $light-color;
+        }
+
+        p {
+            font-size: 24px;
+            color: $primary;
+            margin: 16px 16px;
+            text-align: end;
+            font-weight: 600;
+        }
+
+        .btn {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
 // media queries
 
 @media (max-width: 991px) {
@@ -1101,6 +1199,17 @@ footer {
                 }
             }
         }
+    }
+
+    .product-title {
+        p {
+            width: 100%;
+            font-size: 14px;
+        }
+    }
+
+    .product-box {
+        margin: 0;
     }
 }
 

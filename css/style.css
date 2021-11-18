@@ -107,6 +107,10 @@ section {
   color: #ce1700;
 }
 
+.header .navbar a.active {
+  color: #ce1700;
+}
+
 .header .icons div {
   height: 4.5rem;
   width: 4.5rem;
@@ -972,6 +976,107 @@ footer .credit p span {
   width: 164px;
 }
 
+.product-title {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.product-title h3 {
+  font-size: 34px;
+}
+
+.product-title h3 span {
+  color: #ce1700;
+}
+
+.product-title p {
+  font-size: 18px;
+  margin: 10px auto 0 auto;
+  width: 70%;
+  color: #666;
+}
+
+.product-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(24rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  gap: 1.5rem;
+  margin: 24px 24px;
+}
+
+.product-box .box {
+  overflow: hidden;
+  border-radius: 16px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.product-box .box:hover {
+  -webkit-box-shadow: 0 4px 18px rgba(0, 0, 0, 0.322);
+          box-shadow: 0 4px 18px rgba(0, 0, 0, 0.322);
+}
+
+.product-box .image {
+  height: 25rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-box .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.product-box .image img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  overflow: hidden;
+}
+
+.product-box .image h3 {
+  position: absolute;
+  z-index: 6;
+  background: #ce1700;
+  color: #fff;
+  font-size: 12px;
+  padding: 8px;
+  border-radius: 0 0 16px 0;
+}
+
+.product-box .content {
+  padding: 16px 32px;
+}
+
+.product-box .content h3 {
+  font-size: 18px;
+  color: #130f40;
+  margin-bottom: 8px;
+}
+
+.product-box .content .desc {
+  font-size: 14px;
+  color: #666;
+}
+
+.product-box .content p {
+  font-size: 24px;
+  color: #ce1700;
+  margin: 16px 16px;
+  text-align: end;
+  font-weight: 600;
+}
+
+.product-box .content .btn {
+  width: 100%;
+  text-align: center;
+}
+
 @media (max-width: 991px) {
   .header {
     padding: 2rem;
@@ -1128,6 +1233,13 @@ footer .credit p span {
   }
   .app .content .icon-app img {
     width: 120px !important;
+  }
+  .product-title p {
+    width: 100%;
+    font-size: 14px;
+  }
+  .product-box {
+    margin: 0;
   }
 }
 
